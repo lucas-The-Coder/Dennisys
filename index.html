@@ -207,14 +207,32 @@
       background-clip: text;
     }
 
-    .hero-slogan {
-      font-family: 'DM Mono', monospace;
-      font-size: 13px;
+.hero-tagline {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 0 auto 32px;
+      animation: fadeUp 0.6s 0.18s ease both;
+    }
+
+    .tagline-line {
+      flex: 1;
+      max-width: 80px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(0,212,170,0.5));
+    }
+
+    .tagline-line:last-child {
+      background: linear-gradient(90deg, rgba(0,212,170,0.5), transparent);
+    }
+
+    .tagline-text {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(15px, 2vw, 19px);
+      font-weight: 600;
       color: var(--primary);
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin: -16px auto 28px;
-      animation: fadeUp 0.6s 0.15s ease both;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
     }
 
     .hero-sub {
@@ -913,19 +931,19 @@
 <!-- ── Nav ── -->
 <nav id="nav">
   <a href="#" class="nav-logo">
-    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="42" height="32" viewBox="0 0 42 32" fill="none" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <linearGradient id="dGrad1" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stop-color="#00D4AA"/>
-          <stop offset="100%" stop-color="#0099BB"/>
+        <linearGradient id="ng1" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#00CCAA"/>
+          <stop offset="100%" stop-color="#00AABB"/>
         </linearGradient>
       </defs>
-      <!-- Outer D shape - dark navy -->
-      <path d="M4 4 L4 32 L19 32 C27.5 32 32 26.5 32 18 C32 9.5 27.5 4 19 4 Z" fill="#0F4C6B"/>
-      <!-- Inner D shape - teal gradient -->
-      <path d="M4 4 L4 32 L16 32 C23.5 32 28 26.5 28 18 C28 9.5 23.5 4 16 4 Z" fill="url(#dGrad1)"/>
-      <!-- Chevron arrow cutout -->
-      <path d="M12 11 L20 18 L12 25" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <!-- Back D layer - dark navy, offset right -->
+      <path d="M10 2 L10 30 L22 30 C31 30 36 25 36 16 C36 7 31 2 22 2 Z" fill="#0D3F5C"/>
+      <!-- Front D layer - teal, offset left -->
+      <path d="M2 2 L2 30 L14 30 C23 30 28 25 28 16 C28 7 23 2 14 2 Z" fill="url(#ng1)"/>
+      <!-- White chevron -->
+      <path d="M10 9 L18 16 L10 23" stroke="white" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
     </svg>
     <span class="nav-logo-text">Dennisys</span>
   </a>
@@ -949,7 +967,11 @@
 
   <h1>Software that<br><span class="accent">actually works.</span></h1>
 
-  <p class="hero-slogan">The beginning of smarter technology.</p>
+  <div class="hero-tagline">
+    <span class="tagline-line"></span>
+    <span class="tagline-text">The beginning of smarter technology.</span>
+    <span class="tagline-line"></span>
+  </div>
 
   <p class="hero-sub">
     We build websites, mobile apps, and intelligent automations
@@ -1261,16 +1283,16 @@
 <footer>
   <div class="footer-left">
     <a href="#" class="nav-logo" style="text-decoration:none">
-      <svg width="28" height="28" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="36" height="27" viewBox="0 0 42 32" fill="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <linearGradient id="dGrad2" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#00D4AA"/>
-            <stop offset="100%" stop-color="#0099BB"/>
+          <linearGradient id="fg1" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#00CCAA"/>
+            <stop offset="100%" stop-color="#00AABB"/>
           </linearGradient>
         </defs>
-        <path d="M4 4 L4 32 L19 32 C27.5 32 32 26.5 32 18 C32 9.5 27.5 4 19 4 Z" fill="#0F4C6B"/>
-        <path d="M4 4 L4 32 L16 32 C23.5 32 28 26.5 28 18 C28 9.5 23.5 4 16 4 Z" fill="url(#dGrad2)"/>
-        <path d="M12 11 L20 18 L12 25" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M10 2 L10 30 L22 30 C31 30 36 25 36 16 C36 7 31 2 22 2 Z" fill="#0D3F5C"/>
+        <path d="M2 2 L2 30 L14 30 C23 30 28 25 28 16 C28 7 23 2 14 2 Z" fill="url(#fg1)"/>
+        <path d="M10 9 L18 16 L10 23" stroke="white" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
       </svg>
       <span class="nav-logo-text" style="font-size:15px">Dennisys</span>
     </a>
