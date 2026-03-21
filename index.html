@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dennisys — Software That Works</title>
+  <title>Dennisys | Software That Works</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
@@ -205,6 +205,16 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+    }
+
+    .hero-slogan {
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      color: var(--primary);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin: -16px auto 28px;
+      animation: fadeUp 0.6s 0.15s ease both;
     }
 
     .hero-sub {
@@ -880,11 +890,20 @@
 <!-- ── Nav ── -->
 <nav id="nav">
   <a href="#" class="nav-logo">
-    <div class="nav-logo-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-      </svg>
-    </div>
+    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="dGrad1" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#00D4AA"/>
+          <stop offset="100%" stop-color="#0099BB"/>
+        </linearGradient>
+      </defs>
+      <!-- Outer D shape - dark navy -->
+      <path d="M4 4 L4 32 L19 32 C27.5 32 32 26.5 32 18 C32 9.5 27.5 4 19 4 Z" fill="#0F4C6B"/>
+      <!-- Inner D shape - teal gradient -->
+      <path d="M4 4 L4 32 L16 32 C23.5 32 28 26.5 28 18 C28 9.5 23.5 4 16 4 Z" fill="url(#dGrad1)"/>
+      <!-- Chevron arrow cutout -->
+      <path d="M12 11 L20 18 L12 25" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </svg>
     <span class="nav-logo-text">Dennisys</span>
   </a>
   <ul class="nav-links">
@@ -907,10 +926,11 @@
 
   <h1>Software that<br><span class="accent">actually works.</span></h1>
 
+  <p class="hero-slogan">The beginning of smarter technology.</p>
+
   <p class="hero-sub">
     We build websites, mobile apps, and intelligent automations
-    for businesses that need reliable, production-ready software —
-    not prototypes.
+    for businesses that need reliable, production-ready software, not prototypes.
   </p>
 
   <div class="hero-ctas">
@@ -998,7 +1018,7 @@
       <div class="service-num">01 / WEBSITE DEVELOPMENT</div>
       <div class="service-title">Websites That Convert</div>
       <p class="service-desc">
-        From landing pages to full web applications — we build fast, modern, responsive websites that look great and perform under real traffic. Custom-built, no templates.
+        From landing pages to full web applications. We build fast, modern, responsive websites that look great and perform under real traffic. Custom-built, no templates.
       </p>
       <div class="service-tags">
         <span class="tag tag-green">React</span>
@@ -1015,7 +1035,7 @@
       <div class="service-num">02 / APPLICATION DEVELOPMENT</div>
       <div class="service-title">Apps Built to Ship</div>
       <p class="service-desc">
-        Cross-platform mobile apps for Android and iOS, built with Flutter. Full backend, authentication, real-time data, and AI integration — production-ready from day one.
+        Cross-platform mobile apps for Android and iOS, built with Flutter. Full backend, authentication, real-time data, and AI integration. Production-ready from day one.
       </p>
       <div class="service-tags">
         <span class="tag tag-blue">Flutter</span>
@@ -1032,7 +1052,7 @@
       <div class="service-num">03 / AUTOMATIONS</div>
       <div class="service-title">Systems That Run Themselves</div>
       <p class="service-desc">
-        Connect your tools, automate your workflows, and eliminate repetitive tasks. From API integrations and data pipelines to AI-driven processing — we automate what slows you down.
+        Connect your tools, automate your workflows, and eliminate repetitive tasks. From API integrations and data pipelines to AI-driven processing. We automate what slows you down.
       </p>
       <div class="service-tags">
         <span class="tag tag-amber">Python</span>
@@ -1141,7 +1161,7 @@
         </div>
         <div class="project-title">Freshdesk Automation Pipeline</div>
         <p class="project-desc">
-          Automated ticket processing system — fetches API data, persists to SQL, and sends Telegram summaries. Fully hands-off operations reporting.
+          Automated ticket processing system that fetches API data, persists to SQL, and sends Telegram summaries. Fully hands-off operations reporting.
         </p>
         <div class="project-stack">
           <span class="stack-pill">Python</span>
@@ -1158,8 +1178,8 @@
 <!-- ── Process ── -->
 <section id="process">
   <div class="section-label">How We Work</div>
-  <h2 class="section-title">No fluff.<br>Just delivery.</h2>
-  <p class="section-sub">A straight process that keeps you informed and the project moving.</p>
+  <h2 class="section-title">Transparent.<br>Start to finish.</h2>
+  <p class="section-sub">A clear process that keeps you informed and the project moving forward at every stage.</p>
 
   <div class="process-grid">
     <div class="process-step fade-up">
@@ -1170,7 +1190,7 @@
     <div class="process-step fade-up" style="transition-delay:0.1s">
       <div class="process-num">02</div>
       <div class="process-title">Architecture</div>
-      <p class="process-desc">We design the system — tech stack, data models, API contracts — and agree on scope before building.</p>
+      <p class="process-desc">We design the tech stack, data models, and API contracts, then agree on scope before building.</p>
     </div>
     <div class="process-step fade-up" style="transition-delay:0.2s">
       <div class="process-num">03</div>
@@ -1203,7 +1223,7 @@
     </div>
     <p style="font-size:13px;color:var(--text3);font-family:'DM Mono',monospace">
       Or email us directly at
-      <a href="mailto:hello@dennisys.co.za" style="color:var(--primary);text-decoration:none">hello@dennisys.co.za</a>
+      <a href="mailto:denniswluke@outlook.com" style="color:var(--primary);text-decoration:none">denniswluke@outlook.com</a>
     </p>
   </div>
 </div>
@@ -1212,20 +1232,26 @@
 <footer>
   <div class="footer-left">
     <a href="#" class="nav-logo" style="text-decoration:none">
-      <div class="nav-logo-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-        </svg>
-      </div>
+      <svg width="28" height="28" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="dGrad2" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#00D4AA"/>
+            <stop offset="100%" stop-color="#0099BB"/>
+          </linearGradient>
+        </defs>
+        <path d="M4 4 L4 32 L19 32 C27.5 32 32 26.5 32 18 C32 9.5 27.5 4 19 4 Z" fill="#0F4C6B"/>
+        <path d="M4 4 L4 32 L16 32 C23.5 32 28 26.5 28 18 C28 9.5 23.5 4 16 4 Z" fill="url(#dGrad2)"/>
+        <path d="M12 11 L20 18 L12 25" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
       <span class="nav-logo-text" style="font-size:15px">Dennisys</span>
     </a>
-    <span class="footer-copy">© 2024 Dennisys (Pty) Ltd</span>
+    <span class="footer-copy">© 2026 Dennisys (Pty) Ltd</span>
   </div>
   <div class="footer-links">
     <a href="#services">Services</a>
     <a href="#work">Work</a>
     <a href="#process">Process</a>
-    <a href="mailto:hello@dennisys.co.za">hello@dennisys.co.za</a>
+    <a href="mailto:denniswluke@outlook.com">denniswluke@outlook.com</a>
     <a href="https://github.com/lucas-The-Coder" target="_blank">GitHub</a>
   </div>
 </footer>
@@ -1259,7 +1285,7 @@
     e.preventDefault();
     const email = document.getElementById('emailInput').value.trim();
     if (email && email.includes('@')) {
-      window.location.href = `mailto:hello@dennisys.co.za?subject=Project Inquiry&body=Hi Dennisys, my email is ${email}. I'd like to discuss a project.`;
+      window.location.href = `mailto:denniswluke@outlook.com?subject=Project Inquiry&body=Hi Dennisys, my email is ${email}. I'd like to discuss a project.`;
     } else {
       document.getElementById('emailInput').style.borderColor = '#FF4D6A';
       setTimeout(() => {
