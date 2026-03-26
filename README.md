@@ -2,7 +2,7 @@
 
 A modern, high-performance portfolio website for **Dennisys**, a South African software engineering studio. Built with vanilla HTML, CSS, and JavaScript, deployed via GitHub Pages.
 
-**Live Site:** [lukedennis.co.za](https://lukedennis.co.za)
+**Live Site:** [dennisys.co.za](https://dennisys.co.za)
 
 ---
 
